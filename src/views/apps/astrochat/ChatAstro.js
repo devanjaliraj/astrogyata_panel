@@ -108,7 +108,7 @@ class ChatApp extends React.Component {
     // let astroId = localStorage.getItem('astroId')
     let userIds = [user?.userid?._id]
     this.setState({ userId: user?.userid?._id, roomId: user?.roomid, indexValue: i, astroId: user?.astroid?._id });
-    await axios.get(`http://13.234.48.35:8000/user/allchatwithAstro/${user?.astroid?._id}`)
+    await axios.get(`http://43.204.237.7:4000/user/allchatwithAstro/${user?.astroid?._id}`)
       .then((response) => {
         console.log(response?.data?.data);
         if (response.data.status === true) {

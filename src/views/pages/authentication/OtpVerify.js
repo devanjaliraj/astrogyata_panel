@@ -50,7 +50,7 @@ class OtpVerify extends React.Component {
       otp: otp,
     };
     axios
-      .post("http://13.234.48.35:8000/user/loginVerify", payload)
+      .post("http://43.204.237.7:4000/user/loginVerify", payload)
       .then((response) => {
         console.log(response.data);
         if (response.data.status === true) {
