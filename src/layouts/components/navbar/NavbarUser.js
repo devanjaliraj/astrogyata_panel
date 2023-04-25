@@ -48,9 +48,7 @@ const NavbarUser = () => {
       try {
         //axiosConfig.get(`/dlt_startup/${id}`)
         const astroId = localStorage.getItem("astroId");
-        const data = await axiosConfig.get(
-          `/admin/getoneAstro/${astroId}`
-        );
+        const data = await axiosConfig.get(`/admin/getoneAstro/${astroId}`);
         // /admin/viewoneadmin/${userId}
         console.log(data.data.data);
         setProfilepic(data.data.data);
@@ -67,7 +65,7 @@ const NavbarUser = () => {
           `/user/requested_notification/${astroId}`
         );
         // /admin/viewoneadmin/${userId}
-        console.log(data.data.data);
+        // console.log(data.data.data);
         setAstronotification(data.data.data);
         setViewnotify(data.data.count);
       } catch (error) {
@@ -92,8 +90,7 @@ const NavbarUser = () => {
         >
           <Bell size={21} />
           <Badge pill color="primary" className="badge-up">
-            {" "}
-            {viewnotify}{" "}
+            {viewnotify}
           </Badge>
         </DropdownToggle>
         <DropdownMenu tag="ul" right className="dropdown-menu-media">
@@ -118,7 +115,7 @@ const NavbarUser = () => {
                   </Media>
                   <Media body>
                     <Media heading className="success media-heading" tag="h6">
-                      {data.userid?.fullname}
+                      sadik
                       <smaill className="notification-text ml-1">
                         ({data.userid?.mobile})
                       </smaill>
@@ -152,8 +149,7 @@ const NavbarUser = () => {
           </PerfectScrollbar>
           <li className="dropdown-menu-footer">
             <DropdownItem tag="a" className="p-1 text-center">
-              {" "}
-              Read all notifications{" "}
+              Read all notifications
             </DropdownItem>
           </li>
         </DropdownMenu>

@@ -89,6 +89,9 @@ const ThemeNavbar = (props) => {
       >
         <div className="navbar-wrapper">
           <div className="navbar-container content">
+            <marquee>
+              Admin Commision is % for call, video call and chat
+            </marquee>
             <div
               className="navbar-collapse d-flex justify-content-between align-items-center"
               id="navbar-mobile"

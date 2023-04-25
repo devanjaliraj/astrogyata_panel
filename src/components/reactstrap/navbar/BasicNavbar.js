@@ -387,8 +387,7 @@ class NavbarBasic extends React.Component {
                                   tag="a"
                                   className="p-1 text-center"
                                 >
-                                  {" "}
-                                  Read all notifications{" "}
+                                  Read all notifications
                                 </DropdownItem>
                               </li>
                             </DropdownMenu>
@@ -404,7 +403,7 @@ class NavbarBasic extends React.Component {
                             >
                               <div className="user-nav d-sm-flex d-none">
                                 <span className="user-name text-bold-600">
-                                  John Doe 
+                                  John Doe
                                 </span>
                                 <span className="user-status">Available</span>
                               </div>

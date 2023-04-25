@@ -22,7 +22,7 @@ import "../../../assets/scss/pages/users.scss";
 import { Route } from "react-router-dom";
 import Breadcrumbs from "../../../components/@vuexy/breadCrumbs/BreadCrumb";
 
-class WaitQueueList extends React.Component {
+class WithdrawalRequests extends React.Component {
   state = {
     rowData: [],
     paginationPageSize: 20,
@@ -166,11 +166,7 @@ class WaitQueueList extends React.Component {
   };
   async componentDidMount() {
     let { id } = this.props.match.params;
-    await axios.get(`/user/PayoutList`).then((response) => {
-      let rowData = response.data.data;
-      console.log("ddd>>>>>", rowData);
-      this.setState({ rowData });
-    });
+
     await axios
       .get(`http://3.108.185.7:4000/user/view_onecust/${id}`)
       .then((response) => {
@@ -255,7 +251,7 @@ class WaitQueueList extends React.Component {
                                 ? this.state.currenPageSize
                                 : "" * this.state.getPageSize -
                                   (this.state.getPageSize - 1)}{" "}
-                              -
+                              -{" "}
                               {this.state.rowData.length -
                                 this.state.currenPageSize *
                                   this.state.getPageSize >
@@ -344,4 +340,4 @@ class WaitQueueList extends React.Component {
     );
   }
 }
-export default WaitQueueList;
+export default WithdrawalRequests;
